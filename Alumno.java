@@ -14,6 +14,20 @@ public class Alumno {
         nombre = nombreCompleto;
         numeroMatricula = numeroMatriculaAlumno;
         edad = edadAlumno;
+        if (nombre.length() < 3){
+            nombre = nombreCompleto;
+            System.out.println("Nombre con pocas letras");
+        }
+        else {
+            nombre = nombreCompleto;
+        }
+        if (numeroMatricula.length() < 4){
+            numeroMatricula = numeroMatriculaAlumno;
+            System.out.println("Matricula con pocos digitos");
+        }
+        else {
+            numeroMatricula = numeroMatriculaAlumno;
+        }
     }
 
     /**
