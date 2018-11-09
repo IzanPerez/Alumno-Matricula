@@ -6,6 +6,10 @@ public class Alumno {
     private String numeroMatricula;
     // la edad del alumno
     private int edad;
+    // Longitud nombre
+    private int longitudNombre;
+    // Longitud matricula
+    private int longitudMatricula;
 
     /**
      * Crea un alumno nuevo
@@ -56,6 +60,20 @@ public class Alumno {
      * en su cuenta de Github en formato de 7 caracateres
      */
     public String getNombreUsuarioGithub() {
-        return nombre.substring(0, 3) + numeroMatricula.substring(0, 4);
+        int longitudNombre;
+        int longitudMatricula;
+        if (nombre.length() < 3) {
+          longitudNombre = nombre.length();
+        }
+        else {
+         longitudNombre = 3;
+        }
+        if(numeroMatricula.length() < 4 ){
+            longitudMatricula = numeroMatricula.length();
+        }
+        else {
+            longitudMatricula = 4;
+        }
+        return nombre.substring(0, longitudNombre) + numeroMatricula.substring(0, longitudMatricula);
     }
 }
